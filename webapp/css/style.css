@@ -1,0 +1,63 @@
+/* Enter your custom styles here */
+.masterStyle{
+    width: 25%;
+    }
+    /* Enter your custom styles here */
+  .header{
+    margin-top: 40px;
+  }
+  .searchBtn{
+    width: 30px;
+  }
+  .sh{
+  color: darkgreen;
+  
+  }
+  .tabcolor{
+  background-color: blue;
+  }
+  .hbox{
+    margin-left: 20px;
+  }
+  .loc_text{
+    margin-top: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 5px;
+  }
+  .table1,.table2{
+    /* width: 80%; */
+    border: 1px solid rgb(146, 135, 135);
+    margin-bottom: 20px;
+    margin-left: 2%;
+  }
+  .table1{
+    margin-top: 15px;
+  }
+  .table1_inner{
+    border: 1px solid rgb(146, 135, 135);
+    border-radius: 5px;
+  } 
+  .header1{
+    border: 1px solid rgb(146, 135, 135);
+    /* margin-top: -10px; */
+  }
+  .sh{
+    rotate: 45deg;
+    color:rgb(65, 170, 3);
+  }
+  .col1:hover{
+    color:red;
+  }
+  .other{
+    border: 2px solid rgb(146, 135, 135);
+  }
+  .green{
+    color:green;
+  }
+  .red{
+    color:red;
+  }
+  .page{
+    text-align: center;
+  }

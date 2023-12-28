@@ -1,0 +1,277 @@
+<mvc:View xmlns:tnt="sap.tnt"
+    controllerName="project.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:t="sap.ui.table"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+
+    <Page
+        id="page"
+        title="METER DATA INTEGRATION" class="page"
+    >
+    <Toolbar id="_IDGenToolbar3">
+
+    <Button id="_IDGenButton1" text="Post Ticket" class="head_btn1" type="Emphasized"></Button>
+
+    <Button id="_IDGenButton2" text="Perform Allocation" type="Emphasized"></Button>
+
+    <Button id="_IDGenButton3" text="Execute Estimate" type="Emphasized"></Button>
+
+    <Button id="_IDGenButton4" text="Simulate Compliance" type="Emphasized"></Button>
+
+   </Toolbar>
+    <Panel id="panel1" class="table1" width="97%">
+
+
+    <Panel id="123" class="othe">
+
+    <Toolbar id="_IDGenToolbar1" class="header1" >
+     <OverflowToolbar id="ov">
+      <Title id="_IDGenTitle1" text="Cumulative Quantities"></Title>
+     </OverflowToolbar>
+    </Toolbar>
+    
+    <!-- <Button id="btn2" icon="sap-icon://search" width="50px" class="searchBtn"></Button> -->
+
+
+    <Panel id="_IDGenPanel2">
+    <!-- <Shell id="_IDGenShell3" > -->
+        <t:Table id="_IDGenTable2" class="table1_inner" visibleRowCountMode="Auto">
+        
+            <t:columns >
+                <t:Column  class="col1"  id="_IDGenColumn2">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel2"
+                            text="Business Location"
+                        />
+                    </t:label>
+                    <t:template >
+                        <Text
+                            id="_IDGenText123"
+                        text="{}"
+                        />
+                    </t:template>
+                </t:Column>
+
+                <t:Column id="_IDGenColumn12">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel123"
+                            text="Cummulative QTY "
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text id="txt2" text="{}" />
+                       
+                    </t:template>
+                </t:Column>
+
+                <t:Column id="_IDGenColumn3">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel3"
+                            text="Avg. GCV"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text
+                            id="_IDGenText2"
+                            text="{}"
+                        />
+                    </t:template>
+                </t:Column>
+
+                <t:Column id="_IDGenColumn4">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel4"
+                            text="Avg NCV"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text
+                            id="_IDGenText3"
+                            text="{}"
+                        />
+                    </t:template>
+
+                </t:Column>
+                <t:Column id="_IDGenColumn8">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel8"
+                            text="Nominated"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text id="_IDGenText45" text="{}" />
+                       
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn9">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel9"
+                            text="Status"
+                        />
+                    </t:label>
+                    <t:template>
+                    <core:Icon id="_IDGenIcon4" src="sap-icon://rhombus-milestone-2" class="sh" color="{ path: 'data>status', formatter: '.formatIconColor' }" />  
+                    </t:template>
+                </t:Column>
+            </t:columns>
+        </t:Table>
+    <!-- </Shell> -->
+    </Panel>
+    </Panel>
+
+    </Panel>
+
+
+
+<Panel id="panel2" class="table2" width="97%" >
+     <Toolbar id="_IDGenToolbar2" class="header1" >
+     <OverflowToolbar id="ov2" width="300px">
+      <Title id="_IDGenTitle2" text="Quantity Details Per Stream"  ></Title>
+     </OverflowToolbar>
+    </Toolbar>
+  
+    <Panel id="_IDGenPanel1" >
+    <!-- <Shell id="_IDGenShell1" > -->
+        <t:Table id="_IDGenTable" class="table1_inner" visibleRowCountMode="Auto" rows="{data>/Quantity}" >
+            <t:columns>
+                <t:Column id="_IDGenCo">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel23"
+                            text="Stream ID"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text
+                            id="_IDGenText22"
+                            text="{data>stream}"
+                        />
+                    </t:template>
+                </t:Column>
+
+                <t:Column id="_IDGenColumn22">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel21"
+                            text="F1"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text id="txt" text="{data>f1}" />
+                       
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn33">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel32"
+                            text="Volume (sm3)"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text
+                            id="_IDGenText31"
+                            text="{data>volume}"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column id="GenColumn5">
+                    <t:label>
+                        <Label
+                            id="_IDGenLab"
+                            text="GCV (Kcal/sm3)"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text
+                            id="_IDGenText"
+                            text="{data>gcv}"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel"
+                            text="NCV (Kcal/sm3)"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text id="_IDGenText41" text="{data>ncv}" />
+                       
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn1">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel1"
+                            text="Vol Qual."
+                        />
+                    </t:label>
+                    <t:template>
+                       <core:Icon id="_IDGenIcon1" src="sap-icon://rhombus-milestone-2" class="sh" color="{ path: 'data>volQual', formatter: '.formatIconColor' }"/>
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn71">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabel77"
+                            text="GCV Qual."
+                        />
+                    </t:label>
+                    <t:template>
+                         <core:Icon id="_IDGenIcon2" src="sap-icon://rhombus-milestone-2" class="sh" color="{ path: 'data>gcvQual', formatter: '.formatIconColor' }" />
+                       
+                          
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColum">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabe"
+                            text="NCV Qual."
+                        />
+                    </t:label>
+                    <t:template>
+                         <core:Icon id="_IDGenIcon3" src="sap-icon://rhombus-milestone-2" class="sh" color="{ path: 'data>ncvQual', formatter: '.formatIconColor' }"/>
+                        
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColum3">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabe33"
+                            text="Flowing Temp.(cel)"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text id="_IDGenText42" text="{data>flowing}" />
+                    </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColum4">
+                    <t:label>
+                        <Label
+                            id="_IDGenLabe34"
+                            text="Pressure (psi)"
+                        />
+                    </t:label>
+                    <t:template>
+                        <Text id="_IDGenText43" text="{data>pressure}" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+        </t:Table>
+        <!-- </Shell> -->
+    </Panel>
+    </Panel>
+    </Page>
+</mvc:View>
